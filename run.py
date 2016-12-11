@@ -16,9 +16,6 @@ def hello_monkey():
         text_message=send_sms.send_text(message,to)
     return render_template('index.html',text_message= text_message)
 
-
-
-
     #message = None
     #if text: 
      #   message = send_sms.send_text(text_message)
@@ -33,3 +30,4 @@ def hello_monkey():
 if __name__ == "__main__":
     port=int(os.environ.get("PORT",5000))
     app.run(host ="0.0.0.0",port=port)
+    #app.run()
