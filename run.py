@@ -3,7 +3,13 @@ import twilio.twiml
 import send_sms	
 import os
 
+import sys
+import logging
+
 app = Flask(__name__)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
