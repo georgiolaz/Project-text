@@ -1,0 +1,26 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="jumbotron"> 
+			<div class="container">
+				{% if text_message %}
+					<h1> {{ text_message }} </h1>	
+					<a href="{{ url_for('hello_monkey') }}">Type in another message</a>
+				{% else %}
+					<h1> Hello ! This is an online text messaging service: !</h1>
+					<label for= "BodyMessage">Type the number below</label>
+					<form action ="/" class ="form-inline" rows="3">
+					<div class ="form-group">
+						<input type="numbers" name="to" placeholder ="Input the number eg.+1" class ="form-control">
+					<h1> Hello ! Please type your message to be sent !</h1>
+					<form action ="/" class ="form-inline">
+						<div class ="form-group">
+							<input type="text" name="message" placeholder="Please type here" class="form-control" rows="3" >
+						</div>
+						<input type ="submit" value="Submit" class="btn btn-primary">
+						</form>
+				{% endif %}					
+	</body>
+</html> 
